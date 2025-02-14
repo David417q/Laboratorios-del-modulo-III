@@ -1,0 +1,16 @@
+sudo nano /etc/default/grub Para entrar al group
+
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg Para realizar guardar los cambios
+
+
+
+
+rw init=/bin/bash  
+
+mount -o remount,rw /
+
+passwd
+
+touch /.autorelabel
+
+exec /sbin/init

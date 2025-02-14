@@ -1,0 +1,35 @@
+ip a
+
+
+
+sudo dnf install openssh-server
+
+
+sudo systemctl enable --nowsshd
+
+ssh davidcabrera@
+
+
+desde windows
+
+ssh-keygen  
+notepad y pegamos 
+
+
+ls -la  
+mkdir -p ~/.ssh  
+
+ 
+ls -la  
+sh  
+chmod 700 ~/.ssh  
+
+
+cd ~/.ssh  
+ 
+touch authorized_keys  
+
+chmod 600 authorized_keys  
+
+
+nano authorized_keys  

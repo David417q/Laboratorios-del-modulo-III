@@ -1,0 +1,36 @@
+
+nano backup.sh
+
+#!/bin/bash
+
+fecha=$(date '+%d-%m-%Y-%H:%M')
+
+tar -czvf /home/$(whoami)/backup-$fecha.tar.gz /home/$(whoami)
+
+echo "backup creado con exito en /home/$(whoami)/backup-$fecha.tar.gz"
+
+
+
+chmod +x backup.sh
+
+. /backupsh.sh
+
+clear
+
+
+
+nano ifconfig.sh
+
+
+echo "como quieres que llamar el archivo?"
+read nombre
+
+ifconfig > /home/$(whoami)/Desktop/$nombre.txt
+
+echo "resultado de ifconfig guardado en /home/$(whoami)/Desktop/$nombre.txt"
+
+
+
+chmod +x ifconfig.sh
+
+./ifconfig.sh
